@@ -16,3 +16,14 @@ document.querySelector('.hero a').remove();
 // 1e. changing navbar background color to match footer
 const footerColor = window.getComputedStyle(document.querySelector('footer')).backgroundColor;
 document.querySelector('nav').style.backgroundColor = footerColor;
+
+// 2a. changing all service icons color
+document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+    icon.style.color = '#47C714';
+  });
+  
+  // 2b. changing the digital marketing icon to "ads_click"
+  const icons = document.querySelectorAll('.material-symbols-outlined');
+  if (icons[1]) {
+    icons[1].textContent = 'ads_click';
+  }
