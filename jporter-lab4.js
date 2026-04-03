@@ -1,3 +1,8 @@
+// Joanne Porter
+// ITMD 441
+
+(function() {
+
 // 1a. changing main headline
 document.querySelector('.hero h1').textContent =
 "Uplift Your Brand with Stellar Marketing";
@@ -47,3 +52,5 @@ document.querySelectorAll('img').forEach(img => {
     img.src = 'https://picsum.photos/id/453/400/300';
   }
 });
+
+})();
