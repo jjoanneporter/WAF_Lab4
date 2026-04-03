@@ -17,6 +17,7 @@ document.querySelector('.hero a').remove();
 const footerColor = window.getComputedStyle(document.querySelector('footer')).backgroundColor;
 document.querySelector('nav').style.backgroundColor = footerColor;
 
+
 // 2a. changing all service icons color
 document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
     icon.style.color = '#47C714';
@@ -27,3 +28,22 @@ document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
   if (icons[1]) {
     icons[1].textContent = 'ads_click';
   }
+
+
+// 3a. Make tiles 4 across at >= 1024px
+const style = document.createElement('style');
+style.textContent = `
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+`;
+document.head.appendChild(style);
+
+// 3b. changing musicians image
+document.querySelectorAll('img').forEach(img => {
+  if (img.alt && img.alt.toLowerCase().includes('musician')) {
+    img.src = 'https://picsum.photos/id/453/400/300';
+  }
+});
